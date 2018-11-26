@@ -190,7 +190,7 @@ a.navbar-brand {
 h1 a.navbar-brand {
     font-size: 56px;
     /* DE&ED */
-    color: #000 !important;
+    color: #FFF !important;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 2px;
@@ -429,7 +429,7 @@ position: relative;
     font-size: 5em;
 	font-family: 'Great Vibes', cursive;
     /* Edna Derek  */
-    color: #000;
+    color: #FFFFFF;
     letter-spacing: 3px;
     margin: 0px 0px 10px;
 
@@ -438,7 +438,7 @@ position: relative;
     font-size: 24px;
     font-weight: 400;
     /* 4 April  */
-    color: #000;
+    color: #FFFFFF;
     line-height: 35px;
 }
 
