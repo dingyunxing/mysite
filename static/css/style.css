@@ -125,7 +125,7 @@ ul {
     margin-right: 0;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
 	    border: 1px solid #fff;
     border-radius: 50px;
     background: #fff;
@@ -141,7 +141,7 @@ ul {
 .navbar-default .navbar-nav > li > a {
       font-weight: 600;
       /* navbar title font color */
-	  color:#000;
+	  color:#fff;
     letter-spacing: 2px;
     padding: 5px 14px;
     margin: 0 8px;
@@ -152,13 +152,13 @@ ul {
     text-transform: uppercase;
 }
 .navbar-default .navbar-nav > li > a:hover{
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
 	    border: 1px solid #fff;
     border-radius: 50px;
     background: #fff;
 }
 .navbar-default .navbar-nav > li > a:focus {
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
 	outline:none;
 }
 nav.navbar.navbar-default {
@@ -204,7 +204,7 @@ a.navbar-brand i{
 }*/
 
 h1 a.navbar-brand span {
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
 
 	
 }
@@ -552,7 +552,7 @@ background: rgba(255, 255, 255, 0.4);
 /*--//timer--*/
 /*--about--*/
 .about-top-grid h4 {
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
     font-size: 30px;
     margin: 0;
     font-weight: 600;
@@ -603,11 +603,11 @@ background: rgba(255, 255, 255, 0.4);
     background-size: cover;
 }
 span.banner-icon {
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
     background:rgb(255, 255, 255);
     font-size: 25px;
     line-height: 75px;
-    border: 2px solid rgba(230, 0, 79, 0.9);
+    border: 2px solid rgba(156, 152, 152, 0.9);
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -675,7 +675,7 @@ span.banner-icon {
     font-weight: 600;
     font-size: 23px;
     letter-spacing: 3px;
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
 }
 .w3layouts_more-buttn a {
     font-size: 14px;
@@ -685,10 +685,10 @@ span.banner-icon {
     text-transform: uppercase;
     display: inline-block;
     letter-spacing: 2px;
-    background-color: rgba(230, 0, 79, 0.9);
+    background-color: rgba(156, 152, 152, 0.9);
     outline: none;
     padding: 10px 22px;
-    border: 2px solid rgba(230, 0, 79, 0.9);
+    border: 2px solid rgba(156, 152, 152, 0.9);
 }
 
 .w3layouts_more-buttn a:hover {
@@ -723,7 +723,7 @@ img {
 h4.modal-title {
     text-align: center;
     font-size: 32px;
-    color:rgba(230, 0, 79, 0.9);
+    color:rgba(156, 152, 152, 0.9);
     letter-spacing: 2px;
 }
 
@@ -841,7 +841,7 @@ background: #428bca;
     transition: all 0.5s; 
 }
 .w3ls-hover:hover .view-caption { 
-	background-color:rgba(230, 0, 79, 0.9); 
+	background-color:rgba(156, 152, 152, 0.9); 
 	opacity: 1;
 	width: 100%;
 }
@@ -946,7 +946,7 @@ figure.effect-julia p {
 	display: inline-block;
 	margin: 0 0 1em;
 	padding: 0.4em 1em;
-	background:rgba(230, 0, 79, 0.9);
+	background:rgba(156, 152, 152, 0.9);
     color: #fff;
 	text-transform: none;
 	letter-spacing:2px;
@@ -1047,7 +1047,7 @@ figure.effect-julia:hover p {
 	}
 .contact input[type="text"]:hover,
 .contact input[type="email"]:hover,
-.contact textarea:hover{ border: 2px solid rgba(230, 0, 79, 0.9);}
+.contact textarea:hover{ border: 2px solid rgba(156, 152, 152, 0.9);}
 ::-webkit-input-placeholder { /* Chrome */
   color: #fff;
 }
@@ -1086,7 +1086,7 @@ figure.effect-julia:hover p {
 }
 .contact input[type="submit"]:hover {
     color: #fff;
-    background:rgba(230, 0, 79, 0.9);
+    background:rgba(156, 152, 152, 0.9);
 }
 .footer_grid_left h5 {
     font-size: 25px;
@@ -1120,14 +1120,14 @@ figure.effect-julia:hover p {
     width: 66px;
     height: 66px;
     border-radius: 50%;
-    background:rgba(230, 0, 79, 0.9);
+    background:rgba(156, 152, 152, 0.9);
     text-align: center;
 }
 /*--//contact--*/
 /*-- footer --*/
 .bottom-head h2 a {
     font-size: 50px;
-    color: rgba(230, 0, 79, 0.9);
+    color: rgba(156, 152, 152, 0.9);
 }
 .buttom-para{padding:30px 0px;}
 .buttom-para p{color:#000;
@@ -1135,7 +1135,7 @@ font-size:14px;
 }
 .letter input[type="email"] {
     outline: none;
-    border: 1px solid  rgba(230, 0, 79, 0.9);
+    border: 1px solid  rgba(156, 152, 152, 0.9);
     color: #fff;
     font-size: 14px;
     padding: 10px;
@@ -1146,13 +1146,13 @@ font-size:14px;
 .newsletter input[type="submit"] {
     outline: none;
 	    display: inline-block;
-    border:2px solid rgba(230, 0, 79, 0.9);
+    border:2px solid rgba(156, 152, 152, 0.9);
     color: #fff;
     font-size: 16px;
     padding:8px 0;
 	font-weight:700;
     width: 30%;
-    background:rgba(230, 0, 79, 0.9);
+    background:rgba(156, 152, 152, 0.9);
 	    transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1161,7 +1161,7 @@ font-size:14px;
 }
 .newsletter input[type="submit"]:hover {
     color: #fff;
-    background:rgba(230, 0, 79, 0.9);
+    background:rgba(156, 152, 152, 0.9);
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
