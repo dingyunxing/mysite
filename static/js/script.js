@@ -5,7 +5,8 @@ $(document).ready(function(){
 	/* ---- Countdown timer ---- */
 
 	$('#counter').countdown({
-		timestamp : (new Date("Apr 6 2019 21:15:00"))
+		//javascript 3代表4月
+		timestamp : new Date(2019,3,6)
 	});
 
 
@@ -21,7 +22,8 @@ $(document).ready(function(){
 		function(){ $(this).animate({ top: 0 }, 'fast'); }
 	);
 
-
+	//删除 1 2 
+	$('.callbacks_tabs').remove();
 
 
 });

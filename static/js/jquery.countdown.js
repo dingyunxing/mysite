@@ -39,22 +39,26 @@
 			
 			// Number of days left
 			d = Math.floor(left / days);
-			updateDuo(0, 1, d);
+			var dayBoxCount = d.toString().length;
+			if(dayBoxCount < 2){
+				dayBoxCount = 2
+			}
+			updateDuo(0, 1, d, dayBoxCount);
 			left -= d*days;
 			
 			// Number of hours left
 			h = Math.floor(left / hours);
-			updateDuo(2, 3, h);
+			updateDuo(dayBoxCount, dayBoxCount+1, h);
 			left -= h*hours;
 			
 			// Number of minutes left
 			m = Math.floor(left / minutes);
-			updateDuo(4, 5, m);
+			updateDuo(dayBoxCount+2, dayBoxCount+3, m);
 			left -= m*minutes;
 			
 			// Number of seconds left
 			s = left;
-			updateDuo(6, 7, s);
+			updateDuo(dayBoxCount+4, dayBoxCount+5, s);
 			
 			// Calling an optional user supplied callback
 			options.callback(d, h, m, s);
@@ -64,9 +68,17 @@
 		})();
 		
 		// This function updates two digit positions at once
-		function updateDuo(minor,major,value){
-			switchDigit(positions.eq(minor),Math.floor(value/10)%10);
-			switchDigit(positions.eq(major),value%10);
+		function updateDuo(minor,major,value,dayBoxCount){
+			if(minor==0){
+				//day
+				for(var j=0;j<dayBoxCount;j++){
+					switchDigit(positions.eq(j), value.toString()[j])
+				}
+			}else{
+				switchDigit(positions.eq(minor),Math.floor(value/10)%10);
+				switchDigit(positions.eq(major),value%10);
+			}			
+			
 		}
 		
 		return this;
@@ -74,6 +86,19 @@
 
 
 	function init(elem, options){
+
+		// 这个插件不支持天数达到三位数。这里修改一下支持任意数
+		left = Math.floor((options.timestamp - (new Date())) / 1000);
+		if(left < 0){
+			left = 0;
+		}
+		d = Math.floor(left / days);
+		var dayBoxCount = d.toString().length;
+		if(dayBoxCount < 2){
+			// 最少两个
+			dayBoxCount = 2
+		}
+
 		elem.addClass('countdownHolder');
 
 		// Creating the markup inside the container
@@ -91,17 +116,34 @@
 			else {
 				boxName = "Seconds";
 			}
-			$('<div class="count'+this+'">' +
-				'<span class="position">' +
-					'<span class="digit static">0</span>' +
-				'</span>' +
-				'<span class="position">' +
-					'<span class="digit static">0</span>' +
-				'</span>' +
-				'<span class="boxName">' +
-					'<span class="'+this+'">' + boxName + '</span>' +
-				'</span>'
-			).appendTo(elem);
+
+			var divContent = '<div class="count'+this+'">';
+			var digitSpan = '<span class="position">' +
+			                        '<span class="digit static">0</span>' +
+							'</span>';
+			var boxSpan = '<span class="boxName">' +
+			                        '<span class="'+this+'">' + boxName + '</span>' +
+						  '</span>';
+		    if(boxName != "Days"){
+				dayBoxCount = 2;//default
+			}
+			for(var j=0;j<dayBoxCount;j++){
+				divContent += digitSpan
+			}
+			divContent += boxSpan;
+			$(divContent).appendTo(elem);
+
+			// $('<div class="count'+this+'">' +
+			// 	'<span class="position">' +
+			// 		'<span class="digit static">0</span>' +
+			// 	'</span>' +
+			// 	'<span class="position">' +
+			// 		'<span class="digit static">0</span>' +
+			// 	'</span>' +
+			// 	'<span class="boxName">' +
+			// 		'<span class="'+this+'">' + boxName + '</span>' +
+			// 	'</span>'
+			// ).appendTo(elem);
 			
 			if(this!="Seconds"){
 				elem.append('<span class="points">:</span><span class="countDiv countDiv'+i+'"></span>');
@@ -112,7 +154,7 @@
 
 	// Creates an animated transition between the two numbers
 	function switchDigit(position,number){
-		
+
 		var digit = position.find('.digit')
 		
 		if(digit.is(':animated')){
