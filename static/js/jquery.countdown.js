@@ -69,7 +69,7 @@
 		
 		// This function updates two digit positions at once
 		function updateDuo(minor,major,value,dayBoxCount){
-			if(minor==0){
+			if(minor==0 && dayBoxCount>2){
 				//day
 				for(var j=0;j<dayBoxCount;j++){
 					switchDigit(positions.eq(j), value.toString()[j])
