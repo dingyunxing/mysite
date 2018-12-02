@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	$('#counter').countdown({
 		//javascript 3代表4月
-		timestamp : new Date(2019,3,6)
+		timestamp : new Date(2019,3,6,15,0,0)
 	});
 
 
