@@ -30,7 +30,7 @@ SECRET_KEY = 'x79@qcrsq+a3t3(748@qr*8j6ysl$9!m1t%iy$-_^7o80=ewww'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','54.206.55.101']
+ALLOWED_HOSTS = ['127.0.0.1','52.64.169.189','derekandednawedding.nz', 'www.derekandednawedding.nz']
 
 
 # Application definition
